@@ -11,10 +11,18 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bootstrap-sass'
 gem 'devise', '~> 3.4.1.rc2'
-gem 'paperclip', '~> 3.0'
+
+#Paperclip versions 4.2 and greater (avoids bug in 3.0)
+gem 'paperclip', '~> 4.2'
 
 group :development, :test do
 	gem 'sqlite3'
+	gem 'byebug'
+	gem 'web-console', '~> 2.0'
+	gem 'spring'
+
+	#Enables debugging
+	gem 'pry'
 end
 
 group :production do
@@ -22,11 +30,4 @@ group :production do
 	gem 'rails_12factor'
 end
 
-group :development, :test do
-  gem 'byebug'
-
-  gem 'web-console', '~> 2.0'
-
-  gem 'spring'
-end
 
